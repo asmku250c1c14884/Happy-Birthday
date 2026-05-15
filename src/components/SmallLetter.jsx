@@ -78,7 +78,7 @@ const SmallLetter = () => {
         >
             x
         </div>
-        <p>Yo brocaccho,<br /><br />Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud <br /><br />Rajib</p>
+        <p>Dear Tamil Selvi,<br /><br />Wishing you a very Happy Birthday! Hope you have a wonderful day filled with happiness and success. May all your dreams come true this year.<br /><br />Sanjeev</p>
     </div>
 
     {/* --- NEW SVG DIARY PAGE DECORATION --- */}

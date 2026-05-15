@@ -8,8 +8,10 @@ import Home from './pages/Home'
 import LoveLetter from './pages/LoveLetter'
 import Test from './pages/Test'
 import OpeningAnimation from './components/OpeningAnimation'
+import Gate from './components/Gate'
 
 const App = () => {
+  const [isUnlocked, setIsUnlocked] = useState(false);
 
   const MyRoute = createBrowserRouter(createRoutesFromElements(
     <Route>
@@ -28,29 +30,30 @@ const App = () => {
   const [animateOut, setAnimateOut] = useState(false); // New state for animation
 
   useEffect(() => {
-    const handlePageLoad = () => {
-      setTimeout(() => setAnimateOut(true), 8400);
-      setTimeout(() => setLoading(false), 9000);
-      setTimeout(() => setShowContent(true), 8600);
-    };
+    if (isUnlocked) {
+      // Start cake animation timers ONLY after unlocking
+      const timer1 = setTimeout(() => setAnimateOut(true), 8400);
+      const timer2 = setTimeout(() => setLoading(false), 9000);
+      const timer3 = setTimeout(() => setShowContent(true), 8600);
 
-    if (document.readyState === "complete") {
-      handlePageLoad();
-    } else {
-      window.addEventListener("load", handlePageLoad);
+      return () => {
+        clearTimeout(timer1);
+        clearTimeout(timer2);
+        clearTimeout(timer3);
+      };
     }
-
-    return () => window.removeEventListener("load", handlePageLoad);
-  }, []);
+  }, [isUnlocked]);
 
   return (
     <>
-      {
-        loading && <OpeningAnimation animateOut={animateOut}/>
-      }
-      {
-        showContent && <RouterProvider router={MyRoute} />
-      }
+      {!isUnlocked ? (
+        <Gate onUnlock={() => setIsUnlocked(true)} />
+      ) : (
+        <>
+          {loading && <OpeningAnimation animateOut={animateOut} />}
+          {showContent && <RouterProvider router={MyRoute} />}
+        </>
+      )}
     </>
   )
 }

@@ -7,7 +7,7 @@ const OpeningAnimation = ({ animateOut }) => {
     let disabled = true;
     const end = Date.now() + 2000;
 
-    const colors = ["#bb0000", "#ffffff"];
+    const colors = ["#D4AF37", "#ffffff"];
 
     const frame = () => {
       confetti({
@@ -41,7 +41,7 @@ const OpeningAnimation = ({ animateOut }) => {
   }, 6800);
 
   return (
-    <main className={`bg-[#ee9ca7] w-full h-screen overflow-hidden absolute top-0 left-0 loader-wrapper ${animateOut ? 'slide-up-fade-out' : ''}`}>
+    <main className={`bg-[#240b36] w-full h-screen overflow-hidden absolute top-0 left-0 loader-wrapper ${animateOut ? 'slide-up-fade-out' : ''}`}>
       {/* --- SVG Decoration Container --- */}
       <svg className="full-screen-deco" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
         {/* Large, slow-moving circle (soft cloud/bubble) - existing */}
@@ -53,14 +53,14 @@ const OpeningAnimation = ({ animateOut }) => {
         {/* --- NEW RANDOM PARTICLES/CLOUDS --- */}
 
         {/* Reddish particle 1 */}
-        <circle cx="5" cy="50" r="3" fill="#8B0000" className="deco-shape particle-red-1" />
+        <circle cx="5" cy="50" r="3" fill="#D4AF37" className="deco-shape particle-red-1" />
         {/* White particle 1 */}
         <circle cx="90" cy="60" r="4" fill="rgba(255, 255, 255, 0.7)" className="deco-shape particle-white-1" />
         {/* Soft pink particle 1 */}
         <circle cx="40" cy="10" r="6" fill="rgba(255, 192, 203, 0.5)" className="deco-shape particle-pink-1" />
 
         {/* Reddish particle 2 */}
-        <circle cx="70" cy="95" r="2" fill="rgba(139, 0, 0, 0.8)" className="deco-shape particle-red-2" />
+        <circle cx="70" cy="95" r="2" fill="rgba(212, 175, 55, 0.8)" className="deco-shape particle-red-2" />
         {/* White particle 2 */}
         <circle cx="10" cy="5" r="5" fill="rgba(255, 255, 255, 0.6)" className="deco-shape particle-white-2" />
         {/* Soft pink particle 2 */}
@@ -68,7 +68,7 @@ const OpeningAnimation = ({ animateOut }) => {
 
         {/* More scattered dots for a 'confetti' feel */}
         <circle cx="25" cy="30" r="1" fill="rgba(255, 255, 255, 0.8)" className="deco-shape particle-dot-1" />
-        <circle cx="75" cy="45" r="1.5" fill="rgba(139, 0, 0, 0.7)" className="deco-shape particle-dot-2" />
+        <circle cx="75" cy="45" r="1.5" fill="rgba(212, 175, 55, 0.7)" className="deco-shape particle-dot-2" />
         <circle cx="48" cy="88" r="1" fill="rgba(255, 192, 203, 0.9)" className="deco-shape particle-dot-3" />
         <circle cx="55" cy="20" r="1.2" fill="rgba(255, 255, 255, 0.9)" className="deco-shape particle-dot-4" />
 
@@ -108,8 +108,8 @@ const OpeningAnimation = ({ animateOut }) => {
 
 
           <div className="MUNNA cakeText">
-            <h1 className="MUNNA cakeText-title">Happy 18th Birthday!</h1>
-            <div className="MUNNA cakeText-name">Trisha <div className="MUNNA cakeText-kitty-bow"></div></div>
+            <h1 className="MUNNA cakeText-title">Happy Birthday!</h1>
+            <div className="MUNNA cakeText-name">Tamil Selvi <div className="MUNNA cakeText-kitty-bow"></div></div>
           </div>
 
 

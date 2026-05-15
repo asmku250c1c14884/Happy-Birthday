@@ -410,13 +410,10 @@
 
 /* --- Cake Text Title (Happy 18th Birthday!) --- */
 .cakeText .cakeText-title {
-    font-size: 45px;
-    /* Large and prominent */
-    line-height: 1;
-    color: #8B0000;
-    /* Deeper Hello Kitty pink */
+    color: #D4AF37;
+    /* Metallic Gold */
     font-weight: 700;
-    text-shadow: 0 0 10px rgba(255, 105, 180, 0.5);
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
     /* Soft pink glow */
 }
 
@@ -425,8 +422,8 @@
     font-family: 'Inter', sans-serif;
     font-size: 2.5em;
     font-weight: 700;
-    color: #8b0000;
-    /* Hello Kitty Pink */
+    color: #D4AF37;
+    /* Gold */
     text-transform: uppercase;
     letter-spacing: 5px;
     opacity: 0;
@@ -438,8 +435,8 @@
 .cakeText .cakeText-kitty-bow {
     position: absolute;
     top: 8px;
-    rotate: 46deg;
-    right: 80px;
+    rotate: 15deg;
+    right: 40px;
     width: 80px;
     height: 50px;
     background-image: url('/src/assets/ribbonImg.png');
@@ -516,13 +513,13 @@
     /* Much larger for impact */
     font-weight: 500;
     margin-top: 0px;
-    color: #961212;
+    color: #D4AF37;
     text-transform: capitalize;
     letter-spacing: 0px;
     opacity: 0;
     transform: translateX(-50px) scale(0.9);
     animation: ribbonFadeIn 1s cubic-bezier(0.65, 0.05, 0.36, 1) 7.4s forwards;
-    text-shadow: 0 0 10px rgba(255, 105, 180, 0.5);
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
     /* Soft glow */
 }
 
@@ -560,7 +557,7 @@
     /* --- Cake Text Title (Happy 18th Birthday!) --- */
     .cakeText .cakeText-title {
         font-size: 36px;
-        color: #8b0000;
+        color: #D4AF37;
         width: 300px;
     }
 

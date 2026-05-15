@@ -36,7 +36,7 @@
 
 .boxMail .boxMail-container:hover {
     transform: rotate(-5deg);
-    filter: drop-shadow(0 0 10px #FF7882);
+    filter: drop-shadow(0 0 20px rgba(212, 175, 55, 0.5));
 }
 
 .boxMail .boxMail-container:hover .card1 {
@@ -62,9 +62,8 @@
     position: absolute;
     width: 50%;
     height: 100%;
-    /* Softened gradient: Light Pink to Alice Blue */
-    background: linear-gradient(135deg, #FFC0CB 0%, #F0F8FF 100%);
-    color: #333;
+    background: linear-gradient(135deg, #240b36 0%, #3d105a 100%);
+    color: #fcfaf1;
     /* Darker text for contrast on light background */
     display: flex;
     justify-content: center;
@@ -94,12 +93,12 @@
     background-color: white;
     border-radius: 50%;
     overflow: hidden;
-    border: 5px solid #FFC0CB;
-    /* Hello Kitty Pink border */
+    border: 5px solid #D4AF37;
+    /* Gold border */
     cursor: pointer;
     margin-bottom: 20px;
-    box-shadow: 0 0 15px rgba(255, 192, 203, 0.8);
-    /* Pink outer glow */
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.6);
+    /* Gold outer glow */
     animation: floatImage 4s ease-in-out infinite;
     z-index: 3;
 }
@@ -145,10 +144,10 @@
     letter-spacing: 4px;
     margin: 0;
     /* Hello Kitty style text glow: Hot Pink with White highlight */
-    color: #FF69B4;
-    text-shadow: 0 0 8px rgba(255, 105, 180, 0.8),
-        0 0 15px rgba(255, 255, 255, 0.7);
-    animation: pulseGlowHelloKitty 3s infinite alternate;
+    color: #D4AF37;
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.8),
+        0 0 20px rgba(0, 0, 0, 0.5);
+    animation: pulseGlowGold 3s infinite alternate;
     /* Using NEW keyframe name */
 }
 
@@ -215,8 +214,8 @@
 }
 
 .boxMail .boxMail-container .card1 .deco-shape.bottom-left-ring circle:last-child {
-    fill: rgba(255, 192, 203, 0.3);
-    /* Light pink inner circle */
+    fill: rgba(212, 175, 55, 0.3);
+    /* Gold inner circle */
 }
 
 /* Hover effect: make the decorations slightly fade when the book is open/hovered */
@@ -332,12 +331,12 @@
     width: 100%;
     height: 100%;
     position: relative;
-    background-color: #FF7882;
+    background-color: #3d105a;
     transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
     /* High-quality ease-out */
     overflow: hidden;
     font-family: "Inter", sans-serif;
-    color: #fff;
+    color: #fcfaf1;
     border-radius: 10px;
     /* Rounded corners for the "floating" element */
     padding: 25px;
