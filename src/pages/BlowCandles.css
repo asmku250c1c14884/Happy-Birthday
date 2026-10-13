@@ -1,0 +1,311 @@
+.blow-candles-page {
+    min-height: 100vh;
+    padding: 70px 20px 100px;
+    background: radial-gradient(circle at 50% 30%, #35104d 0%, #150522 70%, #08010d 100%);
+    color: #fcfaf1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-family: 'Sriracha', cursive;
+    overflow-x: hidden;
+}
+
+.blow-header {
+    max-width: 600px;
+    margin-bottom: 25px;
+}
+
+.blow-badge {
+    display: inline-block;
+    padding: 4px 16px;
+    background: rgba(212, 175, 55, 0.15);
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    border-radius: 50px;
+    font-size: 0.8rem;
+    color: #D4AF37;
+    letter-spacing: 1.5px;
+    margin-bottom: 10px;
+}
+
+.blow-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3rem;
+    color: #D4AF37;
+    margin-bottom: 8px;
+    text-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+}
+
+.blow-subtitle {
+    font-size: 1.05rem;
+    opacity: 0.85;
+    line-height: 1.4;
+}
+
+/* --- Cake Stage --- */
+.cake-stage {
+    margin: 20px 0 35px;
+    cursor: pointer;
+    perspective: 1000px;
+}
+
+.interactive-cake {
+    position: relative;
+    width: 260px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.cake-stage:hover .interactive-cake {
+    transform: scale(1.03);
+}
+
+/* Candles Row */
+.candles-row {
+    display: flex;
+    gap: 22px;
+    justify-content: center;
+    margin-bottom: -5px;
+    z-index: 5;
+}
+
+.candle-stick {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.candle-body {
+    width: 12px;
+    height: 48px;
+    background: repeating-linear-gradient(
+        45deg,
+        #D4AF37,
+        #D4AF37 6px,
+        #fff 6px,
+        #fff 12px
+    );
+    border-radius: 4px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+.candle-wick {
+    width: 2px;
+    height: 8px;
+    background: #333;
+    margin-bottom: 2px;
+}
+
+.candle-flame {
+    width: 16px;
+    height: 24px;
+    border-radius: 50% 50% 20% 20%;
+    margin-bottom: 2px;
+    position: relative;
+    transition: all 0.4s ease;
+}
+
+.flame-lit {
+    background: linear-gradient(to top, #ff3b30, #ff9500, #ffcc00, #fff);
+    box-shadow: 0 0 15px #ff9500, 0 0 30px #ffcc00;
+    animation: flameFlicker 0.4s infinite alternate ease-in-out;
+}
+
+@keyframes flameFlicker {
+    0% { transform: scale(1) rotate(-2deg); }
+    100% { transform: scale(1.15) rotate(2deg); }
+}
+
+.flame-smoke {
+    width: 8px;
+    height: 8px;
+    background: rgba(200, 200, 200, 0.4);
+    border-radius: 50%;
+    filter: blur(2px);
+    animation: smokeDissolve 1.2s forwards ease-out;
+}
+
+@keyframes smokeDissolve {
+    0% { transform: translateY(0) scale(1); opacity: 0.8; }
+    100% { transform: translateY(-30px) scale(3); opacity: 0; }
+}
+
+/* Cake Tiers */
+.cake-tier {
+    width: 100%;
+    border-radius: 14px;
+    position: relative;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+}
+
+.cake-tier-top {
+    width: 180px;
+    height: 60px;
+    background: linear-gradient(135deg, #e91e63, #c2185b);
+    border: 3px solid #D4AF37;
+    z-index: 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cake-cherries {
+    font-size: 1rem;
+    letter-spacing: 4px;
+}
+
+.cake-tier-mid {
+    width: 220px;
+    height: 70px;
+    background: linear-gradient(135deg, #4a154b, #2b0c36);
+    border: 3px solid #D4AF37;
+    margin-top: -6px;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cake-pattern {
+    color: #D4AF37;
+    font-weight: bold;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+}
+
+.cake-tier-bot {
+    width: 260px;
+    height: 75px;
+    background: linear-gradient(135deg, #e91e63, #880e4f);
+    border: 3px solid #D4AF37;
+    margin-top: -6px;
+    z-index: 2;
+}
+
+.cake-plate {
+    width: 300px;
+    height: 18px;
+    background: linear-gradient(to bottom, #D4AF37, #997b19);
+    border-radius: 50%;
+    margin-top: -8px;
+    z-index: 1;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+}
+
+/* Buttons */
+.blow-btn, .relight-btn {
+    padding: 14px 36px;
+    font-size: 1.15rem;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    font-family: 'Sriracha', cursive;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.blow-btn {
+    background: linear-gradient(135deg, #D4AF37, #f1c40f);
+    color: #240b36;
+    border: none;
+    box-shadow: 0 0 25px rgba(212, 175, 55, 0.5);
+}
+
+.blow-btn:hover {
+    transform: scale(1.05) translateY(-2px);
+    box-shadow: 0 0 35px rgba(212, 175, 55, 0.8);
+}
+
+.relight-btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid #D4AF37;
+    color: #D4AF37;
+    backdrop-filter: blur(10px);
+}
+
+.relight-btn:hover {
+    background: #D4AF37;
+    color: #240b36;
+    transform: scale(1.05) translateY(-2px);
+}
+
+/* Wish Certificate */
+.wish-certificate-card {
+    margin-top: 35px;
+    max-width: 580px;
+    background: linear-gradient(135deg, rgba(45, 12, 65, 0.95), rgba(25, 6, 38, 0.98));
+    border: 2px solid #D4AF37;
+    border-radius: 24px;
+    padding: 30px 24px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7), 0 0 30px rgba(212, 175, 55, 0.3);
+    animation: certAppear 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+@keyframes certAppear {
+    from { transform: translateY(40px) scale(0.9); opacity: 0; }
+    to { transform: translateY(0) scale(1); opacity: 1; }
+}
+
+.certificate-ribbon {
+    display: inline-block;
+    padding: 3px 14px;
+    background: rgba(212, 175, 55, 0.2);
+    border: 1px solid #D4AF37;
+    border-radius: 30px;
+    font-size: 0.78rem;
+    color: #D4AF37;
+    margin-bottom: 8px;
+}
+
+.certificate-heading {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.2rem;
+    color: #D4AF37;
+    margin-bottom: 12px;
+}
+
+.certificate-body {
+    font-size: 1rem;
+    line-height: 1.6;
+    opacity: 0.92;
+    font-style: italic;
+    color: #fcfaf1;
+    margin-bottom: 18px;
+}
+
+.certificate-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    border-top: 1px solid rgba(212, 175, 55, 0.25);
+    padding-top: 14px;
+}
+
+.certificate-cat {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 2px solid #D4AF37;
+    object-fit: cover;
+}
+
+.certificate-sign {
+    font-size: 0.95rem;
+    color: #D4AF37;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 640px) {
+    .blow-title { font-size: 2.2rem; }
+    .interactive-cake { width: 220px; }
+    .cake-tier-top { width: 150px; }
+    .cake-tier-mid { width: 190px; }
+    .cake-tier-bot { width: 220px; }
+    .cake-plate { width: 250px; }
+    .wish-certificate-card { padding: 22px 18px; }
+    .certificate-heading { font-size: 1.8rem; }
+}

@@ -6,6 +6,10 @@ import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } 
 import Layout from './layout/Layout'
 import Home from './pages/Home'
 import LoveLetter from './pages/LoveLetter'
+import BlowCandles from './pages/BlowCandles'
+import MemoryVault from './pages/MemoryVault'
+import SisterAwards from './pages/SisterAwards'
+import FortuneJar from './pages/FortuneJar'
 import Test from './pages/Test'
 import OpeningAnimation from './components/OpeningAnimation'
 import Gate from './components/Gate'
@@ -17,7 +21,11 @@ const App = () => {
     <Route>
       <Route path='/' element={<Layout />}>
         <Route index element={<Home />}></Route>
-        <Route path='love-Letter' element={<LoveLetter />}></Route>
+        <Route path='love-letter' element={<LoveLetter />}></Route>
+        <Route path='wish' element={<BlowCandles />}></Route>
+        <Route path='memories' element={<MemoryVault />}></Route>
+        <Route path='awards' element={<SisterAwards />}></Route>
+        <Route path='fortune' element={<FortuneJar />}></Route>
         <Route path='test' element={<Test />}></Route>
       </Route>
     </Route>

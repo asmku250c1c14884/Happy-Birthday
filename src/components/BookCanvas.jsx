@@ -29,13 +29,13 @@ const BookCanvas = ({ active, setActive }) => {
                 <div className="card1">
                     <div className="cover-text-wrapper">
                         <h4 className="username">
-                            Dear Tamil Selvi<span className="underline"></span>
+                            Dear Victoria Akka 👑<span className="underline"></span>
                         </h4>
                         <h3 className="cover-title">
                             Happy Birthday!
                         </h3>
                         <p className="cover-subtitle">
-                            Best wishes on your special day... 💌
+                            Best wishes to the world's most amazing sister... 💌
                         </p>
                     </div>
 
@@ -63,16 +63,16 @@ const BookCanvas = ({ active, setActive }) => {
                 <div className="card2">
                     <div className="card2-content">
                         <h3 className="card2-recipient">
-                            To You!
+                            Dear Victoria Akka,
                         </h3>
 
                         {/* Swapping back to H2 to match the original CSS targeting */}
                         <div className="card2-message-text italic">
-                            <article style={{ marginBottom: '8px' }}>Happy Birthday, Tamil Selvi! 🎉</article>
-                            <article style={{ marginBottom: '10px' }}>Wishing you a wonderful birthday filled with happiness and all the things you enjoy most. May this new year of your life be prosperous and full of great achievements.</article>
-                            <article style={{ marginBottom: '10px' }}>It's a pleasure to know you, and I hope your special day brings you plenty of reasons to smile. May you continue to shine bright and reach new heights in everything you do.</article>
-                            <article style={{ marginBottom: '10px' }}>Have a fantastic celebration with your friends and family. <br />
-                                Once again, Happy Birthday!</article>
+                            <article style={{ marginBottom: '8px' }}>இனிய பிறந்தநாள் வாழ்த்துகள் அக்கா! 🎉🎂</article>
+                            <article style={{ marginBottom: '10px' }}>நம்ம வீட்டுக்கு எப்பவுமே தனி அழகும் கெத்தும் நீங்க தான். தம்பிக்கு நல்ல வழிகாட்டியாவும் ஒரு நல்ல தோழியாவும் இருக்குறதுக்கு ரொம்ப நன்றி!</article>
+                            <article style={{ marginBottom: '10px' }}>இந்த வருஷம் நீங்க தொட்டதெல்லாம் வெற்றியாகவும், உங்க வாழ்க்கையில ஆரோக்கியமும் மகிழ்ச்சியும் நிறைஞ்சிருக்கட்டும்.</article>
+                            <article style={{ marginBottom: '10px' }}>Have a wonderful birthday celebration with lots of fun and smiles! <br />
+                                Once again, Happy Birthday Akka! 🎁💐</article>
                         </div>
 
                         <div className="card2-decoration"></div> {/* Decoration */}
@@ -91,7 +91,7 @@ const BookCanvas = ({ active, setActive }) => {
                         <div className="confetti-dots"></div>
 
                         <p className="signature">
-                            From Sanjeev
+                            அன்புடன் Sanjeev ❤️
                         </p>
                     </div>
                 </div>

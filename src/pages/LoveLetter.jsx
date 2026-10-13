@@ -1,46 +1,47 @@
 import React, { useEffect, useRef, useState } from 'react'
+import { Link } from 'react-router'
 
 const LoveLetter = () => {
     const lettersData = [
         {
             id: 1,
-            name: "Tamil Selvi",
-            msg: "Wishing you a very Happy Birthday! Hope your day is filled with joy and laughter. 🎉",
+            name: "Victoria Akka",
+            msg: "இனிய பிறந்தநாள் வாழ்த்துகள் Victoria அக்கா! இந்த வருஷம் உங்களுக்கு செம ஸ்பெஷலா அமையட்டும்! 🎂🎉",
         },
         {
             id: 2,
-            name: "Tamil Selvi",
-            msg: "May this year bring you closer to all your dreams and goals. Have a wonderful birthday! ✨",
+            name: "Dearest Akka",
+            msg: "எப்பவும் இதே மாதிரி பாசமாவும் ஜாலியாவும் சிரிச்சுட்டே இருங்க அக்கா! Have a blast! ✨💖",
         },
         {
             id: 3,
-            name: "Tamil Selvi",
-            msg: "To a great friend, wishing you a year ahead full of success and happiness. Happy Birthday! 🎂",
+            name: "Victoria Akka",
+            msg: "நீங்க ஆசைப்பட்ட எல்லா காரியமும் வெற்றிகரமா நடக்கணும் அக்கா! Wish you great success! 🌟🎁",
         },
         {
             id: 4,
-            name: "Tamil Selvi",
-            msg: "Hope your special day is as amazing as you are. Enjoy every moment! 🎈",
+            name: "Chella Akka",
+            msg: "நம்ம குடும்பத்தோட செல்ல அக்காவுக்கு தம்பியின் அன்பு பிறந்தநாள் வாழ்த்துகள்! 💐🎊",
         },
         {
             id: 5,
-            name: "Tamil Selvi",
-            msg: "Wishing you health, wealth, and infinite happiness on your birthday and always. 🎊",
+            name: "Victoria Akka",
+            msg: "Happy Birthday Akka! வாழ்க்கையில எப்பவும் சந்தோஷமும் ஆரோக்கியமும் நிறைஞ்சிருக்கட்டும்! 🥳🎈",
         },
         {
             id: 6,
-            name: "Tamil Selvi",
-            msg: "Cheers to another year of growth and wonderful experiences. Happy Birthday! 🥂",
+            name: "Sweet Akka",
+            msg: "New chapter, new happiness! உங்களுக்கு பிடிச்ச மாதிரி வாழ்க்கை சூப்பரா போகட்டும் அக்கா! 🥂✨",
         },
         {
             id: 7,
-            name: "Tamil Selvi",
-            msg: "May your path ahead be bright and filled with positivity. Have a blast! 🌟",
+            name: "Queen Victoria 👑",
+            msg: "எப்பவும் கெத்து குறையாத நம்ம Queen Victoria அக்காவுக்கு Happy Birthday! 👑💖",
         },
         {
             id: 8,
-            name: "Tamil Selvi",
-            msg: "Happy Birthday, Tamil Selvi! Sending you best wishes for a fantastic year ahead. 🎁",
+            name: "From Sanjeev ❤️",
+            msg: "எப்பவும் தம்பியின் சப்போர்ட் உங்களுக்கு உண்டு! Happy Birthday Akka! — அன்புடன் Sanjeev ❤️",
         },
     ];
     const [openEnvelope, setOpenEnvelope] = useState(false);
@@ -113,21 +114,37 @@ const LoveLetter = () => {
 
 
     return (
-        <main className='munna bg-[#8b0000] h-screen w-full overflow-hidden'>
+        <main className='munna bg-[#8b0000] h-screen w-full overflow-hidden relative'>
+            <Link 
+                to="/" 
+                className="absolute top-5 left-5 z-50 flex items-center gap-2 bg-black/40 hover:bg-black/60 text-white px-4 py-2 rounded-full border border-amber-300/40 transition duration-300 shadow-lg text-sm md:text-base font-semibold"
+                style={{ backdropFilter: 'blur(8px)' }}
+            >
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-amber-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                </svg>
+                <span>Back to Home</span>
+            </Link>
+
             <section className="munna cssletter z-10">
                 <div className={`envelope ${openEnvelope ? "active" : ""}`}>
                     <button
                         className="munna heart"
                         id="openEnvelope"
                         aria-label="Open Envelope"
-                        onClick={() => setOpenEnvelope(true)}
+                        onClick={() => {
+                            setOpenEnvelope(true);
+                            if (typeof window.confetti === 'function') {
+                                window.confetti({ particleCount: 80, spread: 70, origin: { y: 0.55 } });
+                            }
+                        }}
                     >
                         <span className="munna heart-text">Open</span>
                     </button>
                     <div className="munna envelope-flap text-black relative">
                         <div className='munna absolute left-1/2 top-[20%] -translate-x-1/2 flex items-center justify-center flex-col md:gap-y-2'>
-                            <span className='munna font-sriracha md:text-2xl text-lg'>Envelope Of Bday Wise</span>
-                            <span className='munna font-dancingScript md:text-3xl text-xl'>Dear Tamil Selvi</span>
+                            <span className='munna font-sriracha md:text-2xl text-lg'>பிறந்தநாள் வாழ்த்து மடல் 💌</span>
+                            <span className='munna font-dancingScript md:text-3xl text-xl'>Dear Victoria Akka 💖</span>
                         </div>
                     </div>
                     <div className="munna envelope-folds">

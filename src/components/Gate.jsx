@@ -7,12 +7,15 @@ const Gate = ({ onUnlock }) => {
 
     const handleUnlock = () => {
         const normalizedInput = name.trim().toLowerCase();
-        // Check if the input contains 'tamil' (broad check to be user-friendly)
-        if (normalizedInput.includes('tamil') || normalizedInput.includes('selvi')) {
+        // Check if input contains 'victorya', 'victoria', or related sister/akka names
+        const validNames = ['victorya', 'victoria', 'viktorya', 'viktoria', 'vicky', 'akka'];
+        const isMatch = validNames.some(valid => normalizedInput.includes(valid));
+
+        if (isMatch) {
             onUnlock();
         } else {
-            setError('Please enter the correct name to unlock the surprise!');
-            setTimeout(() => setError(''), 3000);
+            setError('சரியான பேரை type பண்ணுங்க அக்கா! (Victorya) 💖');
+            setTimeout(() => setError(''), 3500);
         }
     };
 
@@ -20,8 +23,8 @@ const Gate = ({ onUnlock }) => {
         <div className="gate-overlay">
             <div className="gate-content">
                 <div className="gate-header">
-                    <h1 className="gate-title">Surprise Awaits</h1>
-                    <p className="gate-subtitle">Please enter your name to unlock the experience</p>
+                    <h1 className="gate-title">Surprise For Akka ✨</h1>
+                    <p className="gate-subtitle">உங்க பேரை type பண்ணி சர்ப்ரைஸை open பண்ணுங்க அக்கா! 🎁</p>
                 </div>
                 
                 <div className="gate-input-group">
@@ -29,15 +32,16 @@ const Gate = ({ onUnlock }) => {
                         type="text" 
                         value={name} 
                         onChange={(e) => setName(e.target.value)}
-                        placeholder="Enter your name here..."
+                        placeholder="Enter name (Victorya)..."
                         className="gate-input"
-                        onKeyPress={(e) => e.key === 'Enter' && handleUnlock()}
+                        onKeyDown={(e) => e.key === 'Enter' && handleUnlock()}
+                        autoFocus
                     />
                     {error && <p className="gate-error">{error}</p>}
                 </div>
 
                 <button className="gate-button" onClick={handleUnlock}>
-                    Unlock Surprise
+                    Unlock Surprise 🎁
                 </button>
 
                 <div className="gate-footer">

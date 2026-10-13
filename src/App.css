@@ -153,6 +153,69 @@ body {
     animation: rotateHeart 1s infinite linear;
 }
 
+#btn__sister_modal {
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.3), rgba(212, 175, 55, 0.12));
+    backdrop-filter: blur(10px);
+    outline: none;
+    padding: 8px 20px;
+    border-radius: 50px;
+    border: 2px solid var(--color-text-pink);
+    color: var(--color-white);
+    font-family: "Sriracha", cursive;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.25);
+    transition: all .35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#btn__sister_modal:hover {
+    background: var(--color-text-pink);
+    color: var(--color-pink);
+    transform: translateY(-2px) scale(1.04);
+    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.6);
+}
+
+#btn__confetti_blast {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    outline: none;
+    padding: 8px 20px;
+    border-radius: 50px;
+    border: 2px solid rgba(255, 255, 255, 0.35);
+    color: var(--color-white);
+    font-family: "Sriracha", cursive;
+    cursor: pointer;
+    transition: all .35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#btn__confetti_blast:hover {
+    background: rgba(255, 255, 255, 0.25);
+    border-color: #fcfaf1;
+    transform: translateY(-2px) scale(1.04);
+    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.4);
+}
+
+.portal-pill {
+    padding: 6px 14px;
+    background: rgba(30, 8, 48, 0.65);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(212, 175, 55, 0.35);
+    border-radius: 30px;
+    color: #fcfaf1;
+    font-size: 0.78rem;
+    font-family: 'Sriracha', cursive;
+    text-decoration: none;
+    transition: all 0.25s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.portal-pill:hover {
+    background: rgba(212, 175, 55, 0.25);
+    border-color: #D4AF37;
+    transform: translateY(-2px) scale(1.05);
+    color: #fff;
+    box-shadow: 0 6px 18px rgba(212, 175, 55, 0.4);
+}
+
 @keyframes rotateHeart {
 
     0%,
@@ -280,7 +343,7 @@ body {
         transform: translateY(0px);
         opacity: 1;
         visibility: visible;
-        width: 300px;
+        width: 320px;
         height: 0px;
     }
 
@@ -289,7 +352,7 @@ body {
         transform: translateY(0px);
         opacity: 1;
         visibility: visible;
-        width: 300px;
+        width: 320px;
         height: 50px;
     }
 }
@@ -305,7 +368,8 @@ body {
 .date__of__birth span,
 .name span {
     font-weight: bold;
-    margin: 0px 40px;
+    margin: 0px 15px;
+    white-space: nowrap;
 }
 
 .date__of__birth span {

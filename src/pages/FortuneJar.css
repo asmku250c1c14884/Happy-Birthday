@@ -1,0 +1,250 @@
+.fortune-page {
+    min-height: 100vh;
+    padding: 70px 20px 110px;
+    background: radial-gradient(circle at 50% 30%, #301048 0%, #150324 65%, #08010e 100%);
+    color: #fcfaf1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Sriracha', cursive;
+    overflow-x: hidden;
+    text-align: center;
+}
+
+.fortune-header {
+    max-width: 650px;
+    margin-bottom: 25px;
+}
+
+.fortune-badge {
+    display: inline-block;
+    padding: 4px 16px;
+    background: rgba(212, 175, 55, 0.15);
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    border-radius: 50px;
+    font-size: 0.8rem;
+    color: #D4AF37;
+    letter-spacing: 1.5px;
+    margin-bottom: 10px;
+}
+
+.fortune-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3rem;
+    color: #D4AF37;
+    margin-bottom: 8px;
+    text-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+}
+
+.fortune-subtitle {
+    font-size: 1.05rem;
+    opacity: 0.85;
+    line-height: 1.5;
+    margin-bottom: 12px;
+}
+
+.draw-counter {
+    display: inline-block;
+    padding: 4px 18px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    font-size: 0.85rem;
+    color: #D4AF37;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+/* Glass Magic Jar */
+.jar-stage {
+    margin: 20px 0 30px;
+    cursor: pointer;
+}
+
+.magic-jar {
+    width: 170px;
+    height: 240px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.jar-stage:hover .magic-jar {
+    transform: scale(1.06) rotate(-2deg);
+}
+
+.jar-lid {
+    width: 90px;
+    height: 22px;
+    background: linear-gradient(135deg, #D4AF37, #997b19);
+    border-radius: 8px 8px 3px 3px;
+    border: 1.5px solid #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    z-index: 5;
+    position: relative;
+}
+
+.jar-lid-handle {
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 24px;
+    height: 10px;
+    background: #D4AF37;
+    border-radius: 5px 5px 0 0;
+}
+
+.jar-neck {
+    width: 80px;
+    height: 16px;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.jar-ribbon-tie {
+    font-size: 20px;
+    position: absolute;
+    top: -2px;
+    z-index: 6;
+}
+
+.jar-body {
+    width: 150px;
+    height: 190px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(8px);
+    border: 2px solid rgba(212, 175, 55, 0.5);
+    border-radius: 20px 20px 45px 45px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5), inset 0 0 25px rgba(212, 175, 55, 0.25);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.star {
+    position: absolute;
+    font-size: 1.2rem;
+    animation: starFloat 3s infinite alternate ease-in-out;
+}
+
+.star-1 { top: 25px; left: 25px; animation-delay: 0.2s; }
+.star-2 { top: 35px; right: 28px; animation-delay: 0.7s; }
+.star-3 { bottom: 45px; left: 35px; animation-delay: 1.2s; }
+.star-4 { bottom: 50px; right: 25px; animation-delay: 1.8s; }
+.star-5 { top: 75px; left: 60px; animation-delay: 0.5s; font-size: 1.4rem; }
+
+@keyframes starFloat {
+    from { transform: translateY(0) scale(0.9); }
+    to { transform: translateY(-12px) scale(1.15); }
+}
+
+.jar-label {
+    padding: 4px 10px;
+    background: rgba(36, 11, 54, 0.85);
+    border: 1px dashed #D4AF37;
+    border-radius: 6px;
+    font-size: 0.65rem;
+    color: #D4AF37;
+    font-weight: bold;
+    letter-spacing: 1px;
+    z-index: 4;
+}
+
+.pull-blessing-btn {
+    padding: 13px 34px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    background: linear-gradient(135deg, #D4AF37, #f1c40f);
+    color: #240b36;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-family: 'Sriracha', cursive;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.5);
+}
+
+.pull-blessing-btn:hover {
+    transform: scale(1.05) translateY(-2px);
+    box-shadow: 0 12px 35px rgba(212, 175, 55, 0.7);
+}
+
+/* Scroll Card */
+.blessing-scroll-card {
+    margin-top: 35px;
+    max-width: 550px;
+    background: linear-gradient(135deg, rgba(45, 12, 65, 0.95), rgba(22, 4, 34, 0.98));
+    border: 2px solid #D4AF37;
+    border-radius: 24px;
+    padding: 28px 24px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8), 0 0 35px rgba(212, 175, 55, 0.35);
+    animation: scrollUnroll 0.45s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+@keyframes scrollUnroll {
+    from { transform: scale(0.85) translateY(30px); opacity: 0; }
+    to { transform: scale(1) translateY(0); opacity: 1; }
+}
+
+.scroll-ornament {
+    display: inline-block;
+    padding: 3px 12px;
+    background: rgba(212, 175, 55, 0.2);
+    border: 1px solid #D4AF37;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    color: #D4AF37;
+    margin-bottom: 8px;
+}
+
+.scroll-icon {
+    font-size: 2.8rem;
+    margin-bottom: 6px;
+    filter: drop-shadow(0 2px 8px rgba(212, 175, 55, 0.4));
+}
+
+.scroll-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.2rem;
+    color: #D4AF37;
+    margin-bottom: 12px;
+}
+
+.scroll-note {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: #f7f3e8;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.scroll-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    border-top: 1px solid rgba(212, 175, 55, 0.25);
+    padding-top: 14px;
+    font-size: 0.92rem;
+    color: #D4AF37;
+}
+
+.scroll-cat {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #D4AF37;
+}
+
+@media screen and (max-width: 640px) {
+    .fortune-title { font-size: 2.2rem; }
+    .blessing-scroll-card { padding: 22px 18px; }
+    .scroll-title { font-size: 1.8rem; }
+}
